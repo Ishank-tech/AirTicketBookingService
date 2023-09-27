@@ -7,8 +7,8 @@ const db = require('./models/index');
 
 const setupAndStartServer = () => {
 
-    app.listen(bodyParser.json());
-    app.listen(bodyParser.urlencoded({extended: true}));
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({extended: true}));
 
     app.use('/api', apiRoutes);
 
